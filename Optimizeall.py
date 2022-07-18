@@ -21,4 +21,5 @@ Vg1min=min(IdVg1['Ids'])
 Vv=pd.DataFrame(columns=['one','two','three','four','five'])
 Id=pd.DataFrame(columns=['one','two','three','four','five'])
 Vv['one']=np.linspace(Vg1min,Vg1max,nv+1) #add plus one to get 50 elements
-Id['one'] = math.log10(np.interp(IdVg1['Ids'],Vv['one'],IdVg1['Vds']))
+Id['one'] = np.log10(np.interp(IdVg1['Ids'],Vv['one'],IdVg1['Vds']))
+print(Id)
